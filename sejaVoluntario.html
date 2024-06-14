@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sempre Criança</title>
+    <link rel="stylesheet" href="styleVoluntario.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/5785106774.js" crossorigin="anonymous"></script>
+<div id="head">
+    <a id="logo" href="index.html">
+        <img src="logo2.png" alt="Logo">
+    </a>
+    <button id="botaoMenuInicial">
+        <div class="linhabotao"></div>
+        <div class="linhabotao"></div>
+        <div class="linhabotao"></div>
+    </button>
+</div>
+
+<div id="menu" class="menu">
+    <ul>
+        <li><a href="index.html">Página inicial</a></li>
+        <li><a href="quemSomos.html">Quem somos</a></li>
+        <li><a href="instituicoes.html">Instituições</a></li>
+        <li><a href="doacao.html">Doações</a></li>
+        <li><a href="sejaVoluntario.html">Seja voluntário</a></li>
+        <li><a href="parceria.html">Parceria</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="noticia.html">News</a></li>
+        <li><a href="VerMaisFotos.html">Fotos</a></li>
+        <li><a href="#footer" class="smooth-scroll">Contato</a></li>
+    </ul>
+</div>
+<div class="divisao" id="divisaosuperior"></div>
+<div id="CorpoSejaVoluntario">
+    <div id="conteudo">
+        <h1>Seja Voluntário</h1>
+        <h3>Coloque suas informações de voluntariado aqui.</h3>  
+        <form id="VoluntarioForm" action="" method="post">
+            <p id="nomeLabel">Digite seu nome:<br>
+            <input type="text" id="nomeInput" placeholder="Nome" required></p>
+    
+            <p id="emailLabel" style="display: none;">Digite seu email:<br>
+            <input type="text" id="emailInput" placeholder="E-mail" required></p>
+    
+            <p style="display: none;" id="resposta1" class="ret">
+                <span .class="textoPerguntasVoluntario">Deseja receber nossa notificação pelo whatsapp?</span><br>
+                <label>
+                    <input type="radio" name="newsletter" value="Sim" class="check"> Sim
+                </label><br><br>
+                <label>
+                    <input type="radio" name="newsletter" value="Não" class="check"> Não
+                </label>
+            </p>
+    
+            <p id="numeroLabel" style="display: none;">Digite seu número: <br>
+            <input type="tel" id="numeroInput" placeholder="Número" required></p>
+    
+            <p id="formacaoLabel" style="display: none;">Informe sua formação:<br>
+                <input type="text" id="FormacaoInput" placeholder="Sua formação" required></p>
+    
+            <p style="display: none;" id="resposta3" class="ret">
+                <span .class="textoPerguntasVoluntario">Você trabalha como profissional liberal?</span><br>
+                <label>
+                    <input type="radio" name="profissionalLiberal" value="sim" class="check"> Sim
+                </label><br><br>
+                <label>
+                    <input type="radio" name="profissionalLiberal" value="nao" class="check"> Não
+                </label>
+            </p>
+    
+            <button id="botaoProximo" type="button">Próximo</button>
+            <button id="botaoEnviar" type="submit" style="display: none;">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<div id="divisao"></div>
+<div id="footer">
+    <div class="recebaInformativosEicones">
+    <div class="retangulo">
+        <h1>Receba nosso informativo</h1>
+        <p>
+            <label>Email:
+                <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
+            </label>
+        </p>
+        <span class="error-message" id="emailInfoError"></span>
+        <button id="btnInfo">Enviar</button>
+        <span class="success-message" id="infoSuccessMessage"></span>
+    </div>
+    <div class="retanguloo" id="icons">
+        <a href="https://www.facebook.com/semprecrianca/?locale=pt_BR"><i id="face" class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.youtube.com/c/ProjetoSempreCrian%C3%A7a/videos"><i id="you" class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/projetosemprecrianca?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i id="insta" class="fa-brands fa-instagram"></i></a>
+    </div>
+    </div>
+
+    <div class="retangulo">
+        <h1>Entre em contato conosco</h1>
+        <p>
+            <label>Nome:
+                <input type='text' name="nomeCont" class='inputs' id="nomeCont"/>
+            </label>
+        </p>
+        <span class="error-message" id="nomeContError"></span>
+        <p>
+            <label>Email:
+                <input type='text' name="emailCont" class='inputs' id="emailCont"/>
+            </label>
+        </p>
+        <span class="error-message" id="emailContError"></span>
+        <p>
+            <label>Telefone:
+                <input type='text' name="telCont" class='inputs' id="telCont"/>
+            </label>
+        </p>
+        <span class="error-message" id="telContError"></span>
+        <p>
+            <label>Assunto:
+                <input type='text' name="assuntoCont" class='inputs' id="assuntoCont"/>
+            </label>
+        </p>
+        <span class="error-message" id="assuntoContError"></span>
+        <p>
+            <label>Mensagem:
+                <textarea name="mensCont" class="inputs" id="mensg"></textarea>
+            </label>
+        </p>
+        <span class="error-message" id="mensgError"></span>
+        <button id="btnContato">Enviar</button>
+        <span class="success-message" id="contatoSuccessMessage"></span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
