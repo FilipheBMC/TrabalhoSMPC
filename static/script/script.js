@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const images = ['/DocumentosInicio/a1.png', '/DocumentosInicio/a2.png', '/DocumentosInicio/a3.png'];
+    const images = ['/static/image/DocumentosInicio/a1.png', '/static/image/DocumentosInicio/a2.png', '/static/image/DocumentosInicio/a3.png'];
     const carrossel = document.getElementById('carrossel');
 
     images.forEach((src) => {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Maria Clara",
             job: "Funcionário Publica",
             img:
-              "/DocumentosInicio/imgProvasocial1.jpg",
+              "/static/image/DocumentosInicio/imgProvasocial1.jpg",
             text:
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis atque neque aut laudantium illo incidunt error aliquam eius minima amet. Ad beatae, culpa obcaecati quam cupiditate similique consequatur! Inventore, et."
           },
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "James",
             job: "Voluntário",
             img:
-              "/DocumentosInicio/imgProvasocial2.jpg",
+              "/static/image/DocumentosInicio/imgProvasocial2.jpg",
             text:
               "SLorem ipsum dolor sit amet consectetur adipisicing elit. Debitis atque neque aut laudantium illo incidunt error aliquam eius minima amet. Ad beatae, culpa obcaecati quam cupiditate similique consequatur! Inventore, et."
           },
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (foto1) {
         foto1.addEventListener('click', () => {
-            window.location.href = "FotosIImaio.html";
+            window.location.href = "/templates/FotosIImaio.html";
         });
     }
 });
@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (foto1) {
         foto1.addEventListener('click', () => {
-            window.location.href = "FotosIMaio.html";
+            window.location.href = "/templates/FotosIMaio.html";
         });
     }
 });
@@ -328,7 +328,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (foto1) {
         foto1.addEventListener('click', () => {
-            window.location.href = "FotosSaudAbr.html";
+            window.location.href = "/templates/FotosSaudAbr.html";
+        });
+    }
+});
+
+//------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', () => {
+    const foto1 = document.getElementById('foto4');
+
+    if (foto1) {
+        foto1.addEventListener('click', () => {
+            window.location.href = "/templates/FotosIAbril.html";
+        });
+    }
+});
+
+//------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', () => {
+    const foto1 = document.getElementById('foto5');
+
+    if (foto1) {
+        foto1.addEventListener('click', () => {
+            window.location.href = "/templates/FotoIIMarco.html";
         });
     }
 });
@@ -340,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (foto1) {
         foto1.addEventListener('click', () => {
-            window.location.href = "FotosMarcoI.html";
+            window.location.href = "/templates/FotosMarcoI.html";
         });
     }
 });
@@ -350,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('RedirecionarRecordacoes').addEventListener('click', function() {
-        window.location.href = 'VerMaisFotos.html';
+        window.location.href = '/templates/VerMaisFotos.html';
     });
 });
 
@@ -368,6 +392,20 @@ document.addEventListener("DOMContentLoaded", function() {
                     top: targetElement.offsetTop,
                     behavior: 'smooth'
                 });
+            }
+        });
+    });
+});
+
+//Acessar dinâmicamente as imagens
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('#corpoParaTerFoots img');
+    
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            const url = image.getAttribute('data-href');
+            if (url) {
+                window.location.href = url;
             }
         });
     });

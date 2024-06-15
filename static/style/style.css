@@ -152,7 +152,7 @@
 
 
 #informativo {
-    background-image: url('DocumentosInicio/FundoDivsFundo.png');
+    background-image: url('/static/image/DocumentosInicio/FundoDivsFundo.png');
     width: 100%;
     height: 450px;
     background-color: #Dc7908;
@@ -227,7 +227,7 @@
 }
 
 #noticias {
-    background-image: url('DocumentosInicio/fotoFundoAlgo.png');
+    background-image: url('/static/image/DocumentosInicio/fotoFundoAlgo.png');
     width: 100%;
     height: 450px;
     background-color: #Dc7908;

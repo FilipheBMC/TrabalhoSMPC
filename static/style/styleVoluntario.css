@@ -103,7 +103,7 @@ body {
     margin: 0;
     height: 75vh;
     max-height: 75vh;
-    background-image: url("FotosPagVoluntario/FundoVoluntario1.png");
+    background-image: url("/static/image/FotosPagVoluntario/FundoVoluntario1.png");
     background-size: cover;
     background-position: center;
     position: relative;
