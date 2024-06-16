@@ -15,75 +15,133 @@ document.getElementById('botaoMenuInicial').addEventListener('click', function()
     }
 });
 
-// Parte do formulário
-
 document.addEventListener('DOMContentLoaded', function () {
-    var nomeLabel = document.getElementById('nomeLabel');
-    var emailLabel = document.getElementById('emailLabel');
-    var numeroLabel = document.getElementById('numeroLabel');
-    var formacaoLabel = document.getElementById('formacaoLabel');
+    var nomeInput = document.getElementById('nomeInput');
+    var emailInput = document.getElementById('emailInput');
+    var numeroInput = document.getElementById('numeroInput');
+    var formacaoInput = document.getElementById('FormacaoInput');
     var botaoProximo = document.getElementById('botaoProximo');
     var botaoEnviar = document.getElementById('botaoEnviar');
+    var agradecimento = document.getElementById('agradecimento');
+    var form = document.getElementById('VoluntarioForm');
     var lista = [
-        nomeLabel,
-        emailLabel,
+        document.getElementById('nomeLabel'),
+        document.getElementById('emailLabel'),
         document.getElementById("resposta1"),
-        numeroLabel,
-        document.getElementById("formacaoLabel"),
+        document.getElementById('numeroLabel'),
+        document.getElementById('formacaoLabel'),
         document.getElementById("resposta3")
     ];
     var indice = 0;
 
+    function validarCampo(campo, mensagemErro) {
+        if (campo.value.trim() === '') {
+            alert(mensagemErro);
+            return false;
+        }
+        return true;
+    }
+
+    function validarEmail(email) {
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailPattern.test(email)) {
+            alert('Por favor, insira um e-mail válido.');
+            return false;
+        }
+        return true;
+    }
+
+    function validarResposta(resposta, mensagemErro) {
+        if (!resposta) {
+            alert(mensagemErro);
+            return false;
+        }
+        return true;
+    }
+
     function verificadorEstado() {
-        var elemento = lista[indice];
-        elemento.style.display = "none";
+        var campoAtual = lista[indice];
+        switch (indice) {
+            case 0:
+                if (!validarCampo(nomeInput, 'Por favor, insira seu nome.')) return;
+                break;
+            case 1:
+                if (!validarEmail(emailInput.value)) return;
+                break;
+            case 2:
+                if (!validarResposta(document.querySelector('input[name="resposta1"]:checked'), 'Por favor, selecione uma opção para receber notificação pelo WhatsApp.')) return;
+                break;
+            case 3:
+                if (!validarCampo(numeroInput, 'Por favor, insira um número de telefone válido.')) return;
+                break;
+            case 4:
+                if (!validarCampo(formacaoInput, 'Por favor, insira sua formação.')) return;
+                break;
+            case 5:
+                if (!validarResposta(document.querySelector('input[name="resposta3"]:checked'), 'Por favor, selecione uma opção para profissional liberal.')) return;
+                break;
+        }
+
+        campoAtual.style.display = 'none';
         indice++;
 
         if (indice < lista.length) {
-            elemento = lista[indice];
-            elemento.style.display = "block";
-
+            lista[indice].style.display = 'block';
             if (indice === 1) {
-                emailLabel.style.display = 'block';
+                document.getElementById('emailLabel').style.display = 'block';
                 emailInput.style.display = 'block';
             } else if (indice === 3) {
-                numeroLabel.style.display = 'block';
+                document.getElementById('numeroLabel').style.display = 'block';
                 numeroInput.style.display = 'block';
             } else if (indice === 4) {
-                formacaoLabel.style.display = 'block';
+                document.getElementById('formacaoLabel').style.display = 'block';
                 formacaoInput.style.display = 'block';
             }
         } else {
-            botaoProximo.style.display = "none";
-            botaoEnviar.style.display = "block";
+            botaoProximo.style.display = 'none';
+            botaoEnviar.style.display = 'block';
         }
     }
 
     botaoProximo.addEventListener('click', verificadorEstado);
 
-    // Adiciona um event listener para cada radio button
     var radioButtons = document.querySelectorAll('input[type="radio"]');
-    radioButtons.forEach(function(radioButton) {
-        radioButton.addEventListener('change', function() {
-            // Remove a classe 'selected' de todos os rótulos
-            document.querySelectorAll('label.ret').forEach(function(label) {
+    radioButtons.forEach(function (radioButton) {
+        radioButton.addEventListener('change', function () {
+            document.querySelectorAll('label.ret').forEach(function (label) {
                 label.classList.remove('selected');
             });
 
-            // Adiciona a classe 'selected' apenas ao rótulo associado ao radio button selecionado
             this.parentNode.classList.add('selected');
 
-            // Reseta a cor dos outros rótulos
-            radioButtons.forEach(function(otherRadioButton) {
-                if(otherRadioButton !== radioButton) {
+            radioButtons.forEach(function (otherRadioButton) {
+                if (otherRadioButton !== radioButton) {
                     otherRadioButton.parentNode.classList.remove('selected');
                 }
             });
         });
     });
 
-    lista[indice].style.display = "block";
+    lista[indice].style.display = 'block';
+
+    function final() {
+        botaoEnviar.style.display = 'none';
+        agradecimento.style.display = 'block';
+        agradecimento.style.fontSize = '24px';
+    }
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (verificadorEstado()) {
+            final();
+        }
+    });
+
+    botaoEnviar.addEventListener('click', final);
 });
+
+
+
 
 //FOOTER
 

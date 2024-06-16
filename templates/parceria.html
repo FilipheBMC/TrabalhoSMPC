@@ -10,12 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <style>
+        /* Fade-in effect */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <script src="https://kit.fontawesome.com/5785106774.js" crossorigin="anonymous"></script>
 <div id="head">
     <a id="logo" href="index.html">
-        <img src="logo2.png" alt="Logo">
+        <img src="/static/image/logo2.png" alt="Logo">
     </a>
     <button id="botaoMenuInicial">
         <div class="linhabotao"></div>
@@ -26,7 +37,7 @@
 
 <div id="menu" class="menu">
     <ul>
-        <li><a href="index.html">Página inicial</a></li> <!-- Caminho relativo corrigido -->
+        <li><a href="index.html">Página inicial</a></li>
         <li><a href="quemSomos.html">Quem somos</a></li>
         <li><a href="instituicoes.html">Instituições</a></li>
         <li><a href="doacao.html">Doações</a></li>
@@ -35,7 +46,7 @@
         <li><a href="eventos.html">Eventos</a></li>
         <li><a href="noticia.html">News</a></li>
         <li><a href="VerMaisFotos.html">Fotos</a></li>
-        <li><a href="#footer"class="smooth-scroll">Contato</a></li>
+        <li><a href="#footer" class="smooth-scroll">Contato</a></li>
     </ul>
 </div>
 
@@ -44,38 +55,48 @@
 <div id="corpoParceria">
     <div id="comoFunciona">
         <h1>Parceria</h1>
-<h2>COMO FUNCIONA?</h2>
-<p>Tem uma empresa ou fornece algum serviço e quer ser aliado do Sempre Criança no caminho do bem?</p>
-
-<p>Temos parcerias de diversas naturezas com empresas. Recebemos doações em dinheiro, mas também temos muito interesse em conversar e desenvolver, junto de nossos parceiros, a melhor forma de, ao final, beneficiar as crianças.</p>
-
-<p><strong>Preencha o formulário abaixo e entraremos em contato com você o quanto antes!</strong></p>
+        <h2>COMO FUNCIONA?</h2>
+        <p>Tem uma empresa ou fornece algum serviço e quer ser aliado do Sempre Criança no caminho do bem?</p>
+        <p>Temos parcerias de diversas naturezas com empresas. Recebemos doações em dinheiro, mas também temos muito interesse em conversar e desenvolver, junto de nossos parceiros, a melhor forma de, ao final, beneficiar as crianças.</p>
+        <p><strong>Preencha o formulário abaixo e entraremos em contato com você o quanto antes!</strong></p>
     </div>
     <div id="empresaParceira">
         <h1>SEJA UMA EMPRESA PARCEIRA</h1>
-        <a href="#"><div id="borda">Responda ao formulário</div></a>
+        <a href="https://semprecrianca.typeform.com/to/MnFXhs?typeform-source=semprecrianca.org"><div id="borda">Responda ao formulário</div></a>
+    </div>
+</div>
+
+<!-- Seção de Parceiros -->
+<div id="parceiros" class="fade-in">
+    <h2 class="TextoDeCadaCorpo">PARCEIROS</h2>
+    <div class="parceiros-container">
+        <div class="parceiro"><img src="https://semprecrianca.org/wp-content/uploads/2019/01/alemiranda.jpg" height="100" width="250" alt="Parceiro 1"></div>
+        <div class="parceiro"><img src="https://semprecrianca.org/wp-content/uploads/2019/01/mclara.jpg" height="100" width="250" alt="Parceiro 2"></div>
+        <div class="parceiro"><img src="https://semprecrianca.org/wp-content/uploads/2019/01/pcsf.jpg" height="100" width="250" alt="Parceiro 3"></div>
+        <div class="parceiro"><img src="https://semprecrianca.org/wp-content/uploads/2019/01/donnatoscana.jpg" height="100" width="250" alt="Parceiro 4"></div>
+        <div class="parceiro"><img src="https://semprecrianca.org/wp-content/uploads/2023/10/EMS-e1697845439856.png" height="100" width="250" alt="Parceiro 5"></div>
     </div>
 </div>
 
 <div id="divisao"></div>
 <div id="footer">
     <div class="recebaInformativosEicones">
-    <div class="retangulo">
-        <h1>Receba nosso informativo</h1>
-        <p>
-            <label>Email:
-                <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
-            </label>
-        </p>
-        <span class="error-message" id="emailInfoError"></span>
-        <button id="btnInfo">Enviar</button>
-        <span class="success-message" id="infoSuccessMessage"></span>
-    </div>
-    <div class="retanguloo" id="icons">
-        <a href="https://www.facebook.com/semprecrianca/?locale=pt_BR"><i id="face" class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.youtube.com/c/ProjetoSempreCrian%C3%A7a/videos"><i id="you" class="fa-brands fa-youtube"></i></a>
-        <a href="https://www.instagram.com/projetosemprecrianca?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i id="insta" class="fa-brands fa-instagram"></i></a>
-    </div>
+        <div class="retangulo">
+            <h1>Receba nosso informativo</h1>
+            <p>
+                <label>Email:
+                    <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
+                </label>
+            </p>
+            <span class="error-message" id="emailInfoError"></span>
+            <button id="btnInfo">Enviar</button>
+            <span class="success-message" id="infoSuccessMessage"></span>
+        </div>
+        <div class="retanguloo" id="icons">
+            <a href="https://www.facebook.com/semprecrianca/?locale=pt_BR"><i id="face" class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/c/ProjetoSempreCrian%C3%A7a/videos"><i id="you" class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/projetosemprecrianca?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i id="insta" class="fa-brands fa-instagram"></i></a>
+        </div>
     </div>
 
     <div class="retangulo">
@@ -116,5 +137,13 @@
 </div>
 
 <script src="/static/script/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeInSection = document.querySelector('.fade-in');
+        if (fadeInSection) {
+            fadeInSection.classList.add('visible');
+        }
+    });
+</script>
 </body>
 </html>

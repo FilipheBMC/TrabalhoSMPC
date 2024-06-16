@@ -44,44 +44,53 @@
     <div id="conteudo">
         <h1>Seja Voluntário</h1>
         <h3>Coloque suas informações de voluntariado aqui.</h3>  
-        <form id="VoluntarioForm" action="" method="post">
+        <form id="VoluntarioForm" action="/autenticar" method="post">
             <p id="nomeLabel">Digite seu nome:<br>
-            <input type="text" id="nomeInput" placeholder="Nome" required></p>
-    
+            <input type="text" id="nomeInput" name="nomeInput" placeholder="Nome" required>
+            </p>
+        
             <p id="emailLabel" style="display: none;">Digite seu email:<br>
-            <input type="text" id="emailInput" placeholder="E-mail" required></p>
-    
+            <input type="text" id="emailInput" name="emailInput" placeholder="E-mail" required>
+            </p>
+        
             <p style="display: none;" id="resposta1" class="ret">
-                <span .class="textoPerguntasVoluntario">Deseja receber nossa notificação pelo whatsapp?</span><br>
+                <span class="textoPerguntasVoluntario">Deseja receber nossa notificação pelo whatsapp?</span><br>
+                <br>
                 <label>
-                    <input type="radio" name="newsletter" value="Sim" class="check"> Sim
+                    <input type="radio" name="resposta1" value="Sim" class="check"> Sim
                 </label><br><br>
                 <label>
-                    <input type="radio" name="newsletter" value="Não" class="check"> Não
+                    <input type="radio" name="resposta1" value="Não" class="check"> Não
                 </label>
             </p>
-    
+        
             <p id="numeroLabel" style="display: none;">Digite seu número: <br>
-            <input type="tel" id="numeroInput" placeholder="Número" required></p>
-    
+            <input type="tel" id="numeroInput" name="numeroInput" placeholder="Número" required>
+            </p>
+        
             <p id="formacaoLabel" style="display: none;">Informe sua formação:<br>
-                <input type="text" id="FormacaoInput" placeholder="Sua formação" required></p>
-    
+                <input type="text" id="FormacaoInput" name="formacaoInput" placeholder="Sua formação" required>
+            </p>
+        
             <p style="display: none;" id="resposta3" class="ret">
-                <span .class="textoPerguntasVoluntario">Você trabalha como profissional liberal?</span><br>
+                <span class="textoPerguntasVoluntario">Você trabalha como profissional liberal?</span><br>
+                <br>
                 <label>
-                    <input type="radio" name="profissionalLiberal" value="sim" class="check"> Sim
+                    <input type="radio" name="resposta3" value="Sim" class="check"> Sim
                 </label><br><br>
                 <label>
-                    <input type="radio" name="profissionalLiberal" value="nao" class="check"> Não
+                    <input type="radio" name="resposta3" value="Não" class="check"> Não
                 </label>
             </p>
-    
+        
+            <p id="agradecimento" style="display:none;">Obrigado pela inscrição! Entraremos em contato</p>
             <button id="botaoProximo" type="button">Próximo</button>
             <button id="botaoEnviar" type="submit" style="display: none;">Enviar</button>
         </form>
     </div>
 </div>
+
+
 
 <div id="divisao"></div>
 <div id="footer">

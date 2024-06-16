@@ -1,8 +1,9 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+    background-image: url('fundoabstrato.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Letras em branco */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #content {
@@ -36,7 +37,6 @@ body {
     display: none;
 }
 
-/* Additional CSS for layout and other sections */
 #head {
     width: 100%;
     height: 100px;
@@ -128,42 +128,52 @@ body {
     font-family: 'Comic Sans MS';
 }
 
-/*corpo*/
-#corpoParceria{
-    width:100%;
-    height:900px;
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    align-items:center;
-}
-#comoFunciona{
-    height:300px;
-    width:800px;
-}
-#empresaParceira{
-    width:100%;
-    height:500px;
-    display:flex;
-    align-items:center;
-    justify-content:top;
-    flex-direction:column;
-}
-#empresaParceira a{
-    text-decoration:none;
-    font-size:15pt;
-    color:orange;
-}
-#borda{
-    width:220px;
-    height:50px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:4px solid orange;
-    border-radius:15px;
+/* Ajustes de estilo para o conteúdo */
+#corpoParceria {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido */
+    padding: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
+#comoFunciona, #empresaParceira {
+    width: 45%;
+    text-align: center;
+}
+
+#comoFunciona h1, #empresaParceira h1 {
+    color: #dc7908; /* Cor original */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#comoFunciona h2 {
+    color: #dc7908; /* Cor original */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#comoFunciona p, #empresaParceira p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#borda {
+    border: 2px solid #dc7908; /* Cor original */
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: #dc7908; /* Cor original */
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#borda:hover {
+    background-color: #dc7908; /* Cor original */
+    color: white; /* Letras em branco */
+}
 
 #divisao {
     background-color: orange;
@@ -172,7 +182,7 @@ body {
     margin-bottom: 50px;
 }
 
-.recebaInformativosEicones{
+.recebaInformativosEicones {
     width: auto;
     height: 80vh;
     display: flex;
@@ -187,7 +197,7 @@ body {
     gap: 50px;
 }
 
-.retanguloo{
+.retanguloo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,7 +208,7 @@ body {
     background-color: #FFA500;
     padding: 20px;
     border-radius: 10px;
-    width:500px;
+    width: 500px;
 }
 
 .retangulo {
@@ -210,7 +220,6 @@ body {
     /*overflow: hidden;
     margin-bottom: 50px;
     padding-right: 5px;*/
-    
 }
 
 .retangulo h1 {
@@ -220,32 +229,39 @@ body {
     font-size: 26pt;
     margin-bottom: 20px;
 }
+
 label {
     color: white;
     font-family: Arial;
     font-size: 13pt;
 }
-#icons{
+
+#icons {
     /*position:absolute;*/
-    left:427px;
-    bottom:-3380px;
-    text-align:center;
+    left: 427px;
+    bottom: -3380px;
+    text-align: center;
 }
+
 #icons i {
     font-size: 24px;
     color: white;
-    margin: 0 30px;
-    transition:color 0.5s;
+    margin: 0 20px;
+    transition: color 0.5s;
 }
-#icons #face:hover{
-    color:#4267B2;
+
+#icons #face:hover {
+    color: #4267B2;
 }
-#icons #you:hover{
-    color:#FF0000;
+
+#icons #you:hover {
+    color: #FF0000;
 }
-#icons #insta:hover{
-    color:#E1306C;
+
+#icons #insta:hover {
+    color: #E1306C;
 }
+
 .inputs {
     width: calc(100% - 22px);
     border: 1px solid rgb(223, 171, 74);
@@ -287,8 +303,9 @@ label {
 .success-message {
     color: green;
     font-size: 12px;
-    display: none;  
+    display: none;
 }
+
 .error-message {
     color: red;
     font-size: 12px;
@@ -299,4 +316,97 @@ label {
     cursor: pointer;
 }
 
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Parceiros container */
+#parceiros {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+#parceiros h2 {
+    color: #dc7908;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.parceiros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.parceiro {
+    width: 250px;
+    height: 100px;
+}
+
+.parceiro img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Parceiros container */
+#parceiros {
+    background-image: url('fundoabstrato.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    text-align: center;
+    color: white; /* Letras em branco */
+}
+
+#parceiros h2 {
+    color: #dc7908; /* Cor original */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.parceiros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.parceiro {
+    width: 250px;
+    height: 100px;
+}
+
+.parceiro img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

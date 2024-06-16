@@ -17,7 +17,7 @@
     <script src="https://kit.fontawesome.com/5785106774.js" crossorigin="anonymous"></script>
 <div id="head">
     <a id="logo" href="index.html">
-        <img src="logo2.png" alt="Logo">
+        <img src="/static/image/logo2.png" alt="Logo">
     </a>
     
     <button id="botaoMenuInicial">
@@ -33,7 +33,7 @@
         <li><a href="/templates/quemSomos.html">Quem somos</a></li>
         <li><a href="instituicoes.html">Instituições</a></li>
         <li><a href="doacao.html">Doações</a></li>
-        <li><a href="sejaVoluntario.html">Seja voluntário</a></li>
+        <li><a href="{{ url_for('sejaVoluntario') }}">Seja voluntário</a></li>
         <li><a href="parceria.html">Parceria</a></li>
         <li><a href="eventos.html">Eventos</a></li>
         <li><a href="noticia.html">News</a></li>
@@ -289,15 +289,17 @@
 <div id="footer">
     <div class="recebaInformativosEicones">
     <div class="retangulo">
-        <h1>Receba nosso informativo</h1>
-        <p>
-            <label>Email:
-                <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
-            </label>
-        </p>
-        <span class="error-message" id="emailInfoError"></span>
-        <button id="btnInfo">Enviar</button>
-        <span class="success-message" id="infoSuccessMessage"></span>
+        <form id="ContatoForm" action="/enviar_email" method="post">
+            <h1>Receba nosso informativo</h1>
+            <p>
+                <label>Email:
+                    <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
+                </label>
+            </p>
+            <span class="error-message" id="emailInfoError"></span>
+            <button id="btnInfo" type="submit">Enviar</button>
+            <span class="success-message" id="infoSuccessMessage"></span>
+        </form>
     </div>
     <div class="retanguloo" id="icons">
         <a href="https://www.facebook.com/semprecrianca/?locale=pt_BR"><i id="face" class="fa-brands fa-facebook"></i></a>
@@ -307,6 +309,7 @@
     </div>
 
     <div class="retangulo">
+        
         <h1>Entre em contato conosco</h1>
         <p>
             <label>Nome:
