@@ -1,48 +1,44 @@
-from flask import Flask, redirect, request, render_template
+from flask import Flask, redirect, request, render_template, url_for
 import pymysql
+import psycopg2
 
 app = Flask(__name__)
 
 # Configurações do banco de dados
 DB_HOST = 'monorail.proxy.rlwy.net'
-DB_USER = 'root'
-DB_PASSWORD = 'vhfLjEKOGimmsuhTQvgbGYwGKvtXgUNP'
+DB_PORT = 32895
+DB_USER = 'postgres'
+DB_PASSWORD = 'wMnIaTvmFCAbGBYXIAtkglRrufkOYegJ'
 DB_NAME = 'railway'
 
-try:
-    connection = pymysql.connect(host=DB_HOST,
-                                        user=DB_USER,
-                                        password=DB_PASSWORD,
-                                        database=DB_NAME)
-    cursor = connection.cursor()
-except Exception as e:
-    print(e)
-else:
-    print('funcionou')
-
-
-
-
-@app.route('/enviar_email', methods=['POST']) 
+@app.route('/enviar_email', methods=['POST'])
 def enviar_email():
-    email = request.form.get('emailInfo')
-         
+    # Obtém o email enviado pelo formulário
+    email = request.form['emailInfo']
+    
+    # Conecta ao banco de dados PostgreSQL
+    connection = psycopg2.connect(host=DB_HOST,
+                                  port=DB_PORT,
+                                  user=DB_USER,
+                                  password=DB_PASSWORD,
+                                  database=DB_NAME)
+    cursor = connection.cursor()
+
     try:
-            # Insere o email no banco de dados
-        query = "INSERT INTO emailteste (email) VALUES (%s)"
+        # Insere o email na tabela contatoemail
+        query = "INSERT INTO contatoemail (email) VALUES (%s)"
         cursor.execute(query, (email,))
         connection.commit()
-        print('ola alguma coisa')
-        return redirect('/')  # Redireciona para a página inicial após o envio bem-sucedido
+        print('teste')
+        return redirect(url_for('home'))  # Redireciona para a página inicial após o envio bem-sucedido
     except Exception as e:
-            # Em caso de erro, faz rollback e exibe uma mensagem de erro
+        # Em caso de erro, faz rollback e exibe uma mensagem de erro
         connection.rollback()
         return "Ocorreu um erro ao enviar o email: " + str(e)
     finally:
-            # Fecha a conexão com o banco de dados
-         connection.close()
-
-    
+        # Fecha a conexão com o banco de dados
+        cursor.close()
+        connection.close()
 
 
 @app.route('/')

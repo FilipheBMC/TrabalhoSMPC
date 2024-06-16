@@ -1,9 +1,8 @@
 body {
-    background-image: url('fundoabstrato.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white; /* Letras em branco */
-    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 #content {
@@ -128,13 +127,12 @@ body {
     font-family: 'Comic Sans MS';
 }
 
-/* Ajustes de estilo para o conteúdo */
 #corpoParceria {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido */
-    padding: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 80px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #comoFunciona, #empresaParceira {
@@ -143,27 +141,28 @@ body {
 }
 
 #comoFunciona h1, #empresaParceira h1 {
-    color: #dc7908; /* Cor original */
+    color: #dc7908;
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
 #comoFunciona h2 {
-    color: #dc7908; /* Cor original */
+    color: #dc7908;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 #comoFunciona p, #empresaParceira p {
+    color: #333;
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
 #borda {
-    border: 2px solid #dc7908; /* Cor original */
+    border: 2px solid #dc7908;
     border-radius: 25px;
     padding: 10px 20px;
-    color: #dc7908; /* Cor original */
+    color: #dc7908;
     font-size: 1.2rem;
     text-align: center;
     display: inline-block;
@@ -171,8 +170,8 @@ body {
 }
 
 #borda:hover {
-    background-color: #dc7908; /* Cor original */
-    color: white; /* Letras em branco */
+    background-color: #dc7908;
+    color: #fff;
 }
 
 #divisao {
@@ -379,16 +378,15 @@ label {
 
 /* Parceiros container */
 #parceiros {
-    background-image: url('fundoabstrato.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
     text-align: center;
-    color: white; /* Letras em branco */
+    padding-bottom: 50px;
+    padding-top: 5px;
+    background-color: #f8f8f8;
 }
 
 #parceiros h2 {
-    color: #dc7908; /* Cor original */
+    color: #dc7908;
+    font-family: Arial; 
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -410,3 +408,7 @@ label {
     height: 100%;
     object-fit: contain;
 }
+
+
+
+
