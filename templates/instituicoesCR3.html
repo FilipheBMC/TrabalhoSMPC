@@ -153,15 +153,17 @@
 <div id="footer">
     <div class="recebaInformativosEicones">
     <div class="retangulo">
-        <h1>Receba nosso informativo</h1>
-        <p>
-            <label>Email:
-                <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
-            </label>
-        </p>
-        <span class="error-message" id="emailInfoError"></span>
-        <button id="btnInfo">Enviar</button>
-        <span class="success-message" id="infoSuccessMessage"></span>
+        <form id="ContatoForm" action="/enviar_email" method="post">
+            <h1>Receba nosso informativo</h1>
+            <p>
+                <label>Email:
+                    <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
+                </label>
+            </p>
+            <span class="error-message" id="emailInfoError"></span>
+            <button id="btnInfo" type="submit">Enviar</button>
+            <span class="success-message" id="infoSuccessMessage"></span>
+        </form>
     </div>
     <div class="retanguloo" id="icons">
         <a href="https://www.facebook.com/semprecrianca/?locale=pt_BR"><i id="face" class="fa-brands fa-facebook"></i></a>

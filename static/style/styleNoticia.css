@@ -191,7 +191,6 @@ body {
     text-decoration:none;
 }
 
-
 #divisao {
     background-color: orange;
     width: 100%;
@@ -200,6 +199,11 @@ body {
     display:flex;
     align-items: center;
     justify-content: center;
+}
+
+#divisao h2{
+    font-family: Arial;
+    color: white;
 }
 
 .recebaInformativosEicones{

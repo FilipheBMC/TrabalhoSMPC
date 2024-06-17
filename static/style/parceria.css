@@ -179,8 +179,15 @@ body {
     width: 100%;
     height: 50px;
     margin-bottom: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
+#divisao h2{
+    font-family: Arial;
+    color: white;
+}
 .recebaInformativosEicones {
     width: auto;
     height: 80vh;

@@ -15,6 +15,7 @@ document.getElementById('botaoMenuInicial').addEventListener('click', function()
     }
 });
 
+/*
 document.addEventListener('DOMContentLoaded', function () {
     var nomeInput = document.getElementById('nomeInput');
     var emailInput = document.getElementById('emailInput');
@@ -139,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     botaoEnviar.addEventListener('click', final);
 });
-
+*/
 
 
 

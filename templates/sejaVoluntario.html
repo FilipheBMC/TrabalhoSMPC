@@ -45,47 +45,70 @@
         <h1>Seja Voluntário</h1>
         <h3>Coloque suas informações de voluntariado aqui.</h3>  
         <form id="VoluntarioForm" action="/autenticar" method="post">
-            <p id="nomeLabel">Digite seu nome:<br>
-            <input type="text" id="nomeInput" name="nomeInput" placeholder="Nome" required>
-            </p>
+            
+            <div class="corpoAgrupamento">
+                
+                <div class="corpoFormAtributos">
+                    <p id="nomeLabel">Digite seu nome:</p>
+                    <input type="text" id="nomeInput" name="nomeInput" placeholder="Nome" required/>
+                </div>
         
-            <p id="emailLabel" style="display: none;">Digite seu email:<br>
-            <input type="text" id="emailInput" name="emailInput" placeholder="E-mail" required>
-            </p>
+                <div class="corpoFormAtributos">
+                    <p id="emailLabel">Digite seu email:</p>
+                        <input type="text" id="emailInput" name="emailInput" placeholder="E-mail" required/>
+                    
+                </div>
+
+            </div>
         
-            <p style="display: none;" id="resposta1" class="ret">
-                <span class="textoPerguntasVoluntario">Deseja receber nossa notificação pelo whatsapp?</span><br>
-                <br>
-                <label>
-                    <input type="radio" name="resposta1" value="Sim" class="check"> Sim
-                </label><br><br>
-                <label>
-                    <input type="radio" name="resposta1" value="Não" class="check"> Não
-                </label>
-            </p>
+            <div class="corpoAgrupamento">
+                
+                <div class="corpoFormAtributos">
+                    <p class="textoPerguntasVoluntario">Deseja receber nossa notificação pelo whatsapp?</p>
+
+                    <div class="radiosButtons">
+                    <label>
+                        <input type="radio" name="resposta1" value="true" class="check"> Sim
+                    </label>
+                    <label>
+                        <input type="radio" name="resposta1" value="false" class="check"> Não
+                    </label>
+                    </div>
+
+                </div>
         
-            <p id="numeroLabel" style="display: none;">Digite seu número: <br>
-            <input type="tel" id="numeroInput" name="numeroInput" placeholder="Número" required>
-            </p>
+                <div class="corpoFormAtributos">
+                    <p id="numeroLabel">Digite seu número:</p>
+                        <input type="tel" id="numeroInput" name="numeroInput" placeholder="Número" required/>
+                </div>
+
+            </div>
+
+            <div class="corpoAgrupamento">
+
+                <div class="corpoFormAtributos">
+                    <p id="formacaoLabel">Informe sua formação:</p>
+                        <input type="text" id="FormacaoInput" name="formacaoInput" placeholder="Sua formação" required>
+                    
+                </div>
         
-            <p id="formacaoLabel" style="display: none;">Informe sua formação:<br>
-                <input type="text" id="FormacaoInput" name="formacaoInput" placeholder="Sua formação" required>
-            </p>
-        
-            <p style="display: none;" id="resposta3" class="ret">
-                <span class="textoPerguntasVoluntario">Você trabalha como profissional liberal?</span><br>
-                <br>
-                <label>
-                    <input type="radio" name="resposta3" value="Sim" class="check"> Sim
-                </label><br><br>
-                <label>
-                    <input type="radio" name="resposta3" value="Não" class="check"> Não
-                </label>
-            </p>
+                <div class="corpoFormAtributos">
+                    <p class="textoPerguntasVoluntario">Você trabalha como profissional liberal?</p>
+
+                    <div class="radiosButtons">
+                        <label>
+                            <input type="radio" name="resposta3" value="true" class="check"> Sim
+                        </label>
+                        <label>
+                            <input type="radio" name="resposta3" value="false" class="check"> Não
+                        </label>
+                    </div>
+                </div>
+
+            </div>
         
             <p id="agradecimento" style="display:none;">Obrigado pela inscrição! Entraremos em contato</p>
-            <button id="botaoProximo" type="button">Próximo</button>
-            <button id="botaoEnviar" type="submit" style="display: none;">Enviar</button>
+            <button id="botaoEnviar" type="submit" >Enviar</button>
         </form>
     </div>
 </div>

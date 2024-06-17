@@ -106,8 +106,8 @@ body {
 #CorpoSejaVoluntario {
     width: 100%;
     margin: 0;
-    height: 75vh;
-    max-height: 75vh;
+    height: 90vh;
+    max-height: 90vh;
     background-image: url("/static/image/FotosPagVoluntario/FundoVoluntario1.png");
     background-size: cover;
     background-position: center;
@@ -164,9 +164,9 @@ body {
     color: #f2f2f2;
 }
 
-input[type="radio"]{
-    display: none;
-}
+/*input[type="radio"]{
+}*/
+
 label {
     color: black; /* Cor padrão do texto */
     cursor: pointer;
@@ -178,6 +178,26 @@ label {
 #VoluntarioForm {
     font-family: Comic Sans MS;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.corpoFormAtributos{
+    width:400px;
+    height: 120px;
+    display: flex;
+    flex-direction:column;
+
+    justify-content: center;
+}
+
+.corpoAgrupamento{
+    width:100%;
+    height: 120px;
+    background-color: #4267B2;
+    display: flex;
+    flex-direction: row;
 }
 
 #resposta1 .class {
@@ -196,6 +216,7 @@ label {
     border: none;
     color: white;
     cursor: pointer;
+
 }
 #botaoEnviar{
     padding-right: 100%;
@@ -204,27 +225,20 @@ label {
 #botaoEnviar:hover {
     transform: scale(1.1);
 }
-
+/*
 .ret {
     width: 100%;
-}
-
-#emailLabel,
-#numeroLabel,
-#formacaoLabel,
-#resposta1,
-#resposta2,
-#resposta3 {
-    display: none;
-}
+}*/
 
 
 .textoPerguntasVoluntario {
-    color: #b4b4b4;
-    font-family: arial;
+    color: #ffffff;
+    font-family: Comic Sans MS;
     text-align: center;
-    font-size: 10px;
+    font-weight: bold;
 }
+
+
 
 
 /* Rodapé */

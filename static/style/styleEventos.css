@@ -128,7 +128,20 @@ html, body {
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+#divisao {
+    background-color: orange;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#divisao h2{
+    font-family: Arial;
+    color: white;
+}
 .blocos:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -161,6 +174,7 @@ html, body {
 
 
 
+/*FOOTER*/
 
 
 #divisao {
@@ -170,11 +184,33 @@ html, body {
     margin-bottom: 50px;
 }
 
+.recebaInformativosEicones{
+    width: auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #footer {
     display: flex;
     align-items: flex-start; /* Alinhar os itens ao topo */
     justify-content: center;
     gap: 50px;
+}
+
+.retanguloo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 75vh;
+    margin-top: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #FFA500;
+    padding: 20px;
+    border-radius: 10px;
+    width:500px;
 }
 
 .retangulo {
@@ -183,9 +219,10 @@ html, body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    /*overflow: hidden;
     margin-bottom: 50px;
-    padding-right: 5px;
+    padding-right: 5px;*/
+    
 }
 
 .retangulo h1 {
@@ -195,16 +232,15 @@ html, body {
     font-size: 26pt;
     margin-bottom: 20px;
 }
-
 label {
     color: white;
     font-family: Arial;
     font-size: 13pt;
 }
 #icons{
-    position:absolute;
-    left:403px;
-    bottom:-7480px;
+    /*position:absolute;*/
+    left:427px;
+    bottom:-3380px;
     text-align:center;
 }
 #icons i {
@@ -270,20 +306,13 @@ label {
     font-size: 12px;
     display: none;
 }
+
 .smooth-scroll {
     cursor: pointer;
 }
- 
-#divisao {
-    background-color: orange;
-    width: 100%;
-    height: 50px;
-    margin-bottom:50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.textoTipo{
-    font-family: arial;
-}
+
+
+
+
+

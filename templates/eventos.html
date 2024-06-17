@@ -43,7 +43,7 @@
 </div>
 
 <div id="divisao">
-    <h2 class="textoTipo">Eventos</h2>
+    <h2 class="textoTipo">EVENTOS</h2>
 </div>
 
 <!--Tem que colocar - data-url="" para pdoer ser redirecionado-->
@@ -141,7 +141,7 @@
         <p class="descricaoEvento">DATA: 10/03 TEMA: Tarde de Brincadeiras Querido Voluntário, Temos um encontro marcado neste domingo, 10/03! Acontecerá o Sempre Ação no Lar da Criança, com o retorno da participação da escola Magalhães Vianna. E sabe o que isso significa? Diversão está garantida e abraços para receber. Precisamos muito da sua presença, serão cerca de 50 crianças participantes! Para […]</p>
     </div>
 
-    <div class="blocos" data-href="dezCampanhaMaterialEcolar24.html">
+    <div class="blocos" data-href="dezCampanhaMaterialEscolar24.html">
         <h4 class="evento">EVENTO</h4>
         <h2 class="nomeEvento">10a Campanha de Material Escolar</h2>
         <p class="dataEvento">27 de janeiro</p>
@@ -163,25 +163,33 @@
     </div>
 </div>
 
+<!-- Rodapé do site -->
+
 <div id="divisao"></div>
 <div id="footer">
+    <div class="recebaInformativosEicones">
     <div class="retangulo">
-        <h1>Receba nosso informativo</h1>
-        <p>
-            <label>Email:
-                <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
-            </label>
-        </p>
-        <span class="error-message" id="emailInfoError"></span>
-        <button id="btnInfo">Enviar</button>
-        <span class="success-message" id="infoSuccessMessage"></span>
+        <form id="ContatoForm" action="/enviar_email" method="post">
+            <h1>Receba nosso informativo</h1>
+            <p>
+                <label>Email:
+                    <input type='text' name="emailInfo" class='inputs' id="emailInfo"/>
+                </label>
+            </p>
+            <span class="error-message" id="emailInfoError"></span>
+            <button id="btnInfo" type="submit">Enviar</button>
+            <span class="success-message" id="infoSuccessMessage"></span>
+        </form>
     </div>
-    <div class="retangulo" id="icons">
+    <div class="retanguloo" id="icons">
         <a href="https://www.facebook.com/semprecrianca/?locale=pt_BR"><i id="face" class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.youtube.com/c/ProjetoSempreCriança/videos"><i id="you" class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.youtube.com/c/ProjetoSempreCrian%C3%A7a/videos"><i id="you" class="fa-brands fa-youtube"></i></a>
         <a href="https://www.instagram.com/projetosemprecrianca?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i id="insta" class="fa-brands fa-instagram"></i></a>
     </div>
+    </div>
+
     <div class="retangulo">
+        
         <h1>Entre em contato conosco</h1>
         <p>
             <label>Nome:
@@ -218,6 +226,6 @@
     </div>
 </div>
 
-<script src="/static/script/scriptEventos.js"></script>
+<script src="/static/script/script.js"></script>
 </body>
 </html>
