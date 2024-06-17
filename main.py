@@ -315,7 +315,9 @@ def Feliz2022SempreCrianda():
 def muitoObrigado2021():
     return render_template('muitoObrigado2021.html')
 
-
+@app.route('/FotosIIMaio')
+def FotosIIMaio():
+    return render_template('FotoIImaio.html')
 
 
 
@@ -323,7 +325,7 @@ def muitoObrigado2021():
 
 @app.route('/VerMaisFotos')
 def VerMaisFotos():
-    return render_template('VerMaisFotos.html')    
+    return render_template('FotosIImaio.html')    
 
 
 
