@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sempre Criança</title>
+    
     <link rel="stylesheet" href="/static/style/style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,7 @@
 <body>
     <script src="https://kit.fontawesome.com/5785106774.js" crossorigin="anonymous"></script>
 <div id="head">
-    <a id="logo" href="index.html">
+    <a id="logo" href="{{ url_for('index') }}">
         <img src="/static/image/logo2.png" alt="Logo">
     </a>
     
@@ -60,22 +61,22 @@
 
 
            
-            <div class="FotosInformativos" data-href="sejaVoluntario.html">
+            <div class="FotosInformativos" data-url="{{ url_for('sejaVoluntario') }}">
                 <img class="fotoInformativo" src="/static/image/FotosInformacao/voluntario.png"/>
                 <p class="textoInfo">Seja voluntário!</p>
             </div>
 
-            <div class="FotosInformativos" data-href="dezCampanhaMaterialEscolar24.html">
+            <div class="FotosInformativos" data-url="{{ url_for('dezCampanhaMaterialEscolar24') }}">
                 <img class="fotoInformativo" src="/static/image/fotosInformacao/materialEscolar.avif"/>
                 <p class="textoInfo">Material Solidario</p>
             </div>
-            <div class="FotosInformativos" data-href="DecimaPrimeiraFeijoada23.html">
+            <div class="FotosInformativos" data-url="{{ url_for('DecimaPrimeiraFeijoada23') }}">
                 <img class="fotoInformativo" src="/static/image/fotosInformacao/feijoada.jpg"/>
                 <p class="textoInfo">Feijoada Solidário</p>
             </div>
         </div>
 
-        <button data-href="{{ url_for('eventos') }}" class="OutrosEventosBtn">Ver mais Informatos</button>
+        <button data-href="{{ url_for('eventos') }}" class="OutrosEventosBtn">Ver mais Informações</button>
     </div>
         
     <!--Div das notícias-->
@@ -84,15 +85,15 @@
         <h2 class="TextoDeCadaCorpo">NOTÍCIAS</h2>
         <div id="noticias">
 
-            <div class="FotosNoticias" data-href="PrimeiroSempreSaude24.html">
+            <div class="FotosNoticias" data-url="{{ url_for('PrimeiroSempreSaude24') }}">
                 <img class="fotoNoticia" src="/static/image/fotosNoticias/dentista.jpg"/>
                 <p class="textoInfo">I Sempre Saude 2024</p>
             </div>
-            <div class="FotosNoticias" data-href="eventoSAJunhoRecrerEAcao.html">
+            <div class="FotosNoticias" data-url="{{ url_for('eventoSAJunhoRecrerEAcao') }}">
                 <img class="fotoNoticia" src="/static/image/fotosNoticias/atencao.jpg"/>
                 <p class="textoInfo">SA de Junho no Recrer&Ação</p>
             </div>
-            <div class="FotosNoticias" data-href="IIISempreSaude24.html">
+            <div class="FotosNoticias" data-url="{{ url_for('IIISempreSaude24') }}">
                 <img class="fotoNoticia" src="/static/image/fotosNoticias/saude.jpg"/>
                 <p class="textoInfo">III Sempre Saúde 2024</p>
             </div>
@@ -264,20 +265,20 @@
     <div id="OrganizacaoDasFotos">
 
         <div id="QuadranteSuperior">
-            <img class = "fotosRecordacoes" id="foto1" src="/static/image\FotosRecordacao\SAII Maio\SaMaioII.jpg"/>
-            <img class = "fotosRecordacoes" id="foto2" src="/static/image\FotosRecordacao\Sa I Maio\SA I maio.jpg"/>
-            <img class = "fotosRecordacoes" id="foto3" src="/static/image\FotosRecordacao\Sempre Saude\Sempre Saude 1.jpg"/>
+            <img class = "fotosRecordacoes" id="foto1" data-url="{{ url_for('FotosIImaio') }}" src="/static/image\FotosRecordacao\SAII Maio\SaMaioII.jpg"/>
+            <img class = "fotosRecordacoes" id="foto2" data-url="{{ url_for('FotosIMaio') }}" src="/static/image\FotosRecordacao\Sa I Maio\SA I maio.jpg"/>
+            <img class = "fotosRecordacoes" id="foto3" data-url="{{ url_for('FotosSaudAbr') }}" src="/static/image\FotosRecordacao\Sempre Saude\Sempre Saude 1.jpg"/>
         </div>
 
         <div id="QuadranteInferior">
-            <img class = "fotosRecordacoes" id="foto4" src="/static/image\FotosRecordacao\SA Abril 24 I\SA Abril 24 I.jpg"/>
-            <img class = "fotosRecordacoes" id="foto5" src="/static/image\FotosRecordacao\Sa Marco 24 II\SA marco 24 II.jpg"/>
-            <img class = "fotosRecordacoes" id="foto6" src="/static/image\FotosRecordacao\SA Marco I\Sa Marco I.jpg"/>
+            <img class = "fotosRecordacoes" id="foto4" data-url="{{ url_for('FotosIAbril') }}" src="/static/image\FotosRecordacao\SA Abril 24 I\SA Abril 24 I.jpg"/>
+            <img class = "fotosRecordacoes" id="foto5" data-url="{{ url_for('FotoIIMarco') }}" src="/static/image\FotosRecordacao\Sa Marco 24 II\SA marco 24 II.jpg"/>
+            <img class = "fotosRecordacoes" id="foto6" data-url="{{ url_for('FotosMarcoI') }}" src="/static/image\FotosRecordacao\SA Marco I\Sa Marco I.jpg"/>
         </div>
 
     </div>
 
-    <button class="OutrosEventosBtn" id="RedirecionarRecordacoes">Ver mais!</button>
+    <button class="OutrosEventosBtn" id="RedirecionarRecordacoes" data-url="{{ url_for('VerMaisFotos') }}">Ver mais!</button>
     
 </div>
 

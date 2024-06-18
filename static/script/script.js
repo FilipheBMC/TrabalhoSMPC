@@ -258,11 +258,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //------------------------------------------------------
 
-
+//Ver mais conseguindo ser redirecionado
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('RedirecionarRecordacoes').addEventListener('click', function() {
-        window.location.href = '/templates/VerMaisFotos.html';
+        var url = this.getAttribute('data-url');
+        window.location.href = url;
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var fotosRecordacoes = document.getElementsByClassName('fotosRecordacoes');
+    for (var i = 0; i < fotosRecordacoes.length; i++) {
+        fotosRecordacoes[i].addEventListener('click', function() {
+            var url = this.getAttribute('data-url');
+            window.location.href = url;
+        });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -303,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelectorAll('#informativo .FotosInformativos').forEach(div => {
     div.addEventListener('click', function() {
-        const url = this.getAttribute('data-href');
+        const url = this.getAttribute('data-url'); // Corrigido para data-url
         if (url) {
             window.location.href = url;
         }
@@ -313,7 +324,7 @@ document.querySelectorAll('#informativo .FotosInformativos').forEach(div => {
 // Manipuladores para divs dentro de #noticias
 document.querySelectorAll('#noticias .FotosNoticias').forEach(div => {
     div.addEventListener('click', function() {
-        const url = this.getAttribute('data-href');
+        const url = this.getAttribute('data-url'); // Corrigido para data-url
         if (url) {
             window.location.href = url;
         }

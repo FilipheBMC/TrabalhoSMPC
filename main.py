@@ -315,17 +315,34 @@ def Feliz2022SempreCrianda():
 def muitoObrigado2021():
     return render_template('muitoObrigado2021.html')
 
-@app.route('/FotosIIMaio')
-def FotosIIMaio():
-    return render_template('FotoIImaio.html')
+@app.route('/FotosIImaio')
+def FotosIImaio():
+    return render_template('FotosIImaio.html')
 
+@app.route('/FotosIMaio')
+def FotosIMaio():
+    return render_template('FotosIMaio.html')
 
+@app.route('/FotosSaudAbr')
+def FotosSaudAbr():
+    return render_template('FotosSaudAbr.html')
 
+@app.route('/FotosIAbril')
+def FotosIAbril():
+    return render_template('FotosIAbril.html')
+
+@app.route('/FotoIIMarco')
+def FotoIIMarco():
+    return render_template('FotoIIMarco.html')
+
+@app.route('/FotosMarcoI')
+def FotosMarcoI():
+    return render_template('FotosMarcoI.html')
 
 
 @app.route('/VerMaisFotos')
 def VerMaisFotos():
-    return render_template('FotosIImaio.html')    
+    return render_template('VerMaisFotos.html')    
 
 
 

@@ -28,16 +28,16 @@
     
     <div id="menu" class="menu">
         <ul>
-            <li><a href="index.html">Página inicial</a></li> <!-- Caminho relativo corrigido -->
-            <li><a href="quemSomos.html">Quem somos</a></li>
-            <li><a href="instituicoes.html">Instituições</a></li>
-            <li><a href="doacao.html">Doações</a></li>
-            <li><a href="sejaVoluntario.html">Seja voluntário</a></li>
-            <li><a href="parceria.html">Parceria</a></li>
-            <li><a href="eventos.html">Eventos</a></li>
-            <li><a href="noticia.html">News</a></li>
-            <li><a href="VerMaisFotos.html">Fotos</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="{{ url_for('index') }}">Página inicial</a></li>
+            <li><a href="{{ url_for('quemSomos') }}">Quem somos</a></li>
+            <li><a href="{{ url_for('instituicoes') }}">Instituições</a></li>
+            <li><a href="{{ url_for('doacao') }}">Doações</a></li>
+            <li><a href="{{ url_for('sejaVoluntario') }}">Seja voluntário</a></li>
+            <li><a href="{{ url_for('parceria') }}">Parceria</a></li>
+            <li><a href="{{ url_for('eventos') }}">Eventos</a></li>
+            <li><a href="{{ url_for('noticia') }}">News</a></li>
+            <li><a href="{{ url_for('VerMaisFotos') }}">Fotos</a></li>
+            <li><a href="#footer" class="smooth-scroll">Contato</a></li>
         </ul>
     </div>
 
