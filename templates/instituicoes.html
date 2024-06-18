@@ -48,11 +48,10 @@
             <p>O Sempre Criança não tem uma sede própria e atua direta e indiretamente junto às instituições cadastradas, listadas a seguir:</p>
         </div>
         <div id="classificacao">
-            <a href="/templates/instituicoes.html">Abrigos</a>
-            <a href="/templates/instituicoesPJ.html">Projetos sociais</a>
-            <a href="/templates/instituicoesCR.html">Creches</a>
+            <a href="{{ url_for('instituicoes') }}">Abrigos</a>
+            <a href="{{ url_for('instituicoesPJ') }}">Projetos sociais</a>
+            <a href="{{ url_for('instituicoesCR') }}">Creches</a>
         </div>
-
         <div class="blocos" id="bloco1">
             <h3><b>Orfanato Santo Antônio</b></h3>
             <br>

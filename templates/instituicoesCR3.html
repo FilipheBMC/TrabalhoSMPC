@@ -49,9 +49,9 @@
             <p>O Sempre Criança não tem uma sede própria e atua direta e indiretamente junto às instituições cadastradas, listadas a seguir:</p>
         </div>
         <div id="classificacao">
-            <a href="/templates/instituicoes.html">Abrigos</a>
-            <a href="/templates/instituicoesPJ.html">Projetos sociais</a>
-            <a href="#">Creches</a>
+            <a href="{{ url_for('instituicoes') }}">Abrigos</a>
+            <a href="{{ url_for('instituicoesPJ') }}">Projetos sociais</a>
+            <a href="{{ url_for('instituicoesCR') }}">Creches</a>
         </div>
 
         <div class="blocos" id="bloco1">
@@ -143,10 +143,10 @@
         </div>
     </div>
     <div id="btns">
-        <a href="/templates/instituicoesCR.html"><div class="btn">1</div></a>
-        <a href="/templates/instituicoesCR2.html"><div class="btn">2</div></a>
-        <a href="/templates/instituicoesCR3.html"><div class="btn">3</div></a>
-        <a href="/templates/instituicoesCR4.html"><div class="btn">4</div></a>
+        <a href="{{ url_for('instituicoesCR') }}"><div class="btn">1</div></a>
+        <a href="{{ url_for('instituicoesCR2') }}"><div class="btn">2</div></a>
+        <a href="{{ url_for('instituicoesCR3') }}"><div class="btn">3</div></a>
+        <a href="{{ url_for('instituicoesCR4') }}"><div class="btn">4</div></a>
     </div>
 </div>
 <div id="divisao"></div>

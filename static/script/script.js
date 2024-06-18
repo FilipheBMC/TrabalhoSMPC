@@ -341,8 +341,77 @@ document.querySelectorAll('.OutrosEventosBtn').forEach(button => {
     });
 });
 
+//Testando no ver mais fotos
+document.querySelectorAll('#corpoParaTerFoots .fotoss').forEach(img => {
+    img.addEventListener('click', function() {
+        const url = this.getAttribute('data-url');
+        if (url) {
+            window.location.href = url;
+        }
+    });
+});
+
+//Testando no ver mais fotos
+document.querySelectorAll('#fundo .blocos').forEach(img => {
+    img.addEventListener('click', function() {
+        const url = this.getAttribute('data-url');
+        if (url) {
+            window.location.href = url;
+        }
+    });
+});
+
+//Testando no ver mais fotos
+document.querySelectorAll('.container .not').forEach(img => {
+    img.addEventListener('click', function() {
+        const url = this.getAttribute('data-url');
+        if (url) {
+            window.location.href = url;
+        }
+    });
+});
+
 // DOAÇÕES
 
 document.getElementById('paypal-button').addEventListener('click', function() {
     window.open('https://www.paypal.com/donate/?hosted_button_id=FV22LWCERQRSA', '_blank');
 });
+
+
+//Enviando menssagem por email
+(function() {
+    emailjs.init('seu_user_id'); // Substitua 'seu_user_id' pelo seu USER_ID
+
+    document.getElementById('btnContato').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Obtém os valores do formulário
+        var nome = document.getElementById('nomeCont').value;
+        var email = document.getElementById('emailCont').value;
+        var telefone = document.getElementById('telCont').value;
+        var assunto = document.getElementById('assuntoCont').value;
+        var mensagem = document.getElementById('mensg').value;
+
+        // Envia o e-mail
+        emailjs.send('seu_service_id', 'seu_template_id', {
+            nome: nome,
+            email: email,
+            telefone: telefone,
+            assunto: assunto,
+            mensagem: mensagem
+        }).then(function(response) {
+            console.log('E-mail enviado com sucesso!', response);
+            // Limpa o formulário e exibe uma mensagem de sucesso
+            document.getElementById('contatoSuccessMessage').innerHTML = 'E-mail enviado com sucesso!';
+            document.getElementById('nomeCont').value = '';
+            document.getElementById('emailCont').value = '';
+            document.getElementById('telCont').value = '';
+            document.getElementById('assuntoCont').value = '';
+            document.getElementById('mensg').value = '';
+        }, function(error) {
+            console.error('Erro ao enviar o e-mail:', error);
+            // Exibe uma mensagem de erro
+            document.getElementById('contatoSuccessMessage').innerHTML = 'Ocorreu um erro ao enviar o e-mail. Por favor, tente novamente mais tarde.';
+        });
+    });
+})();

@@ -26,16 +26,14 @@ document.getElementById('botaoMenuInicial').addEventListener('click', function()
 
 //Para acessar dinâmicamente as páginas
 
-document.querySelectorAll('#corpoParaTerFoots img').forEach(img => {
+document.querySelectorAll('#corpoParaTerFoots .fotoss').forEach(img => {
     img.addEventListener('click', function() {
-        const url = this.getAttribute('data-href');
+        const url = this.getAttribute('data-url');
         if (url) {
             window.location.href = url;
         }
     });
 });
-
-
 
 //suavidade contato
 document.addEventListener("DOMContentLoaded", function() {

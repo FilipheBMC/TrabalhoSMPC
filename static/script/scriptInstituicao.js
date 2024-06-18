@@ -24,18 +24,45 @@ document.getElementById('botaoMenuInicial').addEventListener('click', function()
     }
 });
 
-//BOTOES NÚMEROS
-document.addEventListener("DOMContentLoaded", function() {
+// BOTÕES
+
+function markActiveButton() {
     var currentUrl = window.location.href;
     var btns = document.querySelectorAll("#btns .btn");
 
     btns.forEach(function(btn) {
         var btnLink = btn.parentElement.href;
-        if (currentUrl.includes(btnLink)) {
+        if (currentUrl === btnLink) {
             btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
         }
     });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    markActiveButton();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    markActiveButton(); 
+
+    var btns = document.querySelectorAll("#btns .btn");
+    btns.forEach(function(btn) {
+        btn.addEventListener("click", function(event) {
+            // Remover a classe 'active' de todos os botões
+            btns.forEach(function(b) {
+                b.classList.remove("active");
+            });
+
+            // Adicionar a classe 'active' apenas ao botão clicado
+            this.classList.add("active");
+        });
+    });
+});
+
+
+
 
 //CONTATO
 document.addEventListener("DOMContentLoaded", function() {

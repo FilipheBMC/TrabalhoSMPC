@@ -31,7 +31,7 @@ def enviar_email():
         query = "INSERT INTO contatoemail (email) VALUES (%s)"
         cursor.execute(query, (email,))
         connection.commit()
-        return redirect(url_for('home'))  # Redireciona para a página inicial após o envio bem-sucedido
+        return redirect(url_for('index'))  # Redireciona para a página inicial após o envio bem-sucedido
     except Exception as e:
         # Em caso de erro, faz rollback e exibe uma mensagem de erro
         connection.rollback()
@@ -116,7 +116,7 @@ def instituicoes():
 
 
 
-@app.route('/institucoesPJ')
+@app.route('/instituicoesPJ')
 def instituicoesPJ():
     return render_template('instituicoesPJ.html')
 
@@ -124,7 +124,7 @@ def instituicoesPJ():
 
 
 @app.route('/instituicoesPJ2')
-def insituicoesPJ2():
+def instituicoesPJ2():
     return render_template('instituicoesPJ2.html')
 
 
@@ -344,9 +344,17 @@ def FotosMarcoI():
 def VerMaisFotos():
     return render_template('VerMaisFotos.html')    
 
+@app.route('/FotosSAFevereiroI')
+def FotosSAFevereiroI():
+    return render_template('FotosSAFevereiroI.html')
 
+@app.route('/FotosSAJaneiro24')
+def FotosSAJaneiro24():
+    return render_template('FotosSAJaneiro24.html')
 
-
+@app.route('/FotosSASaude23Setembro')
+def FotosSASaude23Setembro():
+    return render_template('FotosSASaude23Setembro.html')
 
 
 

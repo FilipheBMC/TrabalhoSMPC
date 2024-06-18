@@ -50,10 +50,10 @@
             <p>O Sempre Criança não tem uma sede própria e atua direta e indiretamente junto às instituições cadastradas, listadas a seguir:</p>
             </div>
             <div id="classificacao">
-                <a href="/templates/instituicoes.html">Abrigos</a>
-                <a href="/templates/instituicoesPJ.html">Projetos sociais</a>
-                <a href="/templates/instituicoesCR.html">Creches</a>
-                </div>
+                <a href="{{ url_for('instituicoes') }}">Abrigos</a>
+                <a href="{{ url_for('instituicoesPJ') }}">Projetos sociais</a>
+                <a href="{{ url_for('instituicoesCR') }}">Creches</a>
+            </div>
                 
                 <div class="blocos" id="bloco1">
                     <h3>TURMA DA SOPA NITERÓI</h3>
@@ -122,8 +122,8 @@
                     </div>
                     </div>
                     <div id="btns">
-                        <a href="/templates/instituicoesPJ.html"><div class="btn">1</div></a>
-                        <a href="/templates/instituicoesPJ2.html"><div class="btn">2</div></a>
+                        <a href="{{ url_for('instituicoesPJ') }}"><div class="btn">1</div></a>
+                        <a href="{{ url_for('instituicoesPJ2') }}"><div class="btn">2</div></a>
                     </div>
         </div>
         
